@@ -32,6 +32,9 @@
             case 'report':
                 include "./controllers/reportController.php";
                 break;
+            case 'may':
+                include './controllers/mayController.php';
+                break;
             default:
                 # code...
                 break;

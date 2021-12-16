@@ -60,7 +60,7 @@
                 $updateControl="index.php?controller=phong&action=update";
                 ?>
     <div class="row pt-2 text-center border-bottom">
-        <a href="index.php?controller=may&action=index&maphong=<?php echo $phong["MaPhong"] ?>"
+        <a href="index.php?controller=may&action=info&maphong=<?php echo $phong["MaPhong"] ?>"
             class="col-2 btn btn-info text-white"><?php echo $phong["MaPhong"] ?></a>
         <div class="col-6 ">
             <?php echo $phong["TenPhong"] ?>
