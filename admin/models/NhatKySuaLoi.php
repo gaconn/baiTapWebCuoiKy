@@ -14,4 +14,14 @@
         $query= "select * from nhatkysuamay where maMay= ?";
         return $obj->selectQuery($query, [$maMay]);
     }
+    function deleteNhatKySuaMay($manks){
+        $obj=new Db();
+        $query="delete from nhatkysuamay where manhatky=?";
+        return $obj->insertQuery($query, [$manks]);
+    }
+    function updateNhatKySuaMay($value){
+        $obj= new Db();
+        $query= "update nhatkysuamay set loailoi=? mota=? ngaysuaxong=? where manhatky=?";
+        return $obj->insertQuery($query, $value);
+    }
 ?>

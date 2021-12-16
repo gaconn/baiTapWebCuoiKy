@@ -26,6 +26,8 @@
 
 .choice {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .delete-base {
@@ -48,6 +50,7 @@
     bottom: 0;
     left: 0;
     border-radius: 10px;
+    text-align: center;
 }
 
 #<?php echo $deleteId ?>:checked~.delete {
