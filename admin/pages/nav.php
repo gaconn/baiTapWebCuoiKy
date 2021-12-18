@@ -1,6 +1,6 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-primary fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Trang chủ</a>
+            <a class="navbar-brand text-white" href="index.php?controller=home&action=index">Trang chủ</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
                 aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

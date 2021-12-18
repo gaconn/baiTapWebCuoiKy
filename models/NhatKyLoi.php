@@ -16,7 +16,7 @@
     }
     function insertNhatKyLoi($value){
         $obj=new Db();
-        $query= "insert into nhatkyloi(MaNhatKyLoi, suco, thoigianloi,mamay)";
+        $query= "insert into nhatkyloi(MaNhatKyLoi, suco, thoigianloi,mamay) values(?,?,?,?)";
         return $obj->insertQuery($query, $value);
     }
 

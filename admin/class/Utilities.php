@@ -24,8 +24,8 @@
             return $id;
         }
         public static function formatDatetime($date){
-            $newDate= new Date($date);
-            return $newDate->format("Y-m-d");
+            $newDate= date("Y-m-d H:i:s", strtotime($date));
+            return $newDate;
         }
     }
 ?>

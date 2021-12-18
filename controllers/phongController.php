@@ -29,16 +29,24 @@
             break;
         case "submitReport":
             $maNhatKy= Utilities::generateId(5);
-            $tinhTrang= Utilities::post("description");
             $mamay= Utilities::post("mamay");
-            $ngay= date("Y-m-d");
+            $tinhTrang= Utilities::post("suco");
+            $maphong= Utilities::get("maphong");
+            $ngay= date("Y-m-d H:i:s");
             include "./models/NhatKyLoi.php";
+            include './models/Device.php';
+            echo "tinhtrang".$tinhTrang."tinhtrang";
             $row=insertNhatKyLoi([$maNhatKy,$tinhTrang,$ngay,$mamay]);
-            $message= $row>0?"Đã gửi báo cáo đến quản trị viên.":"";
-            include "./pages/notification/success.php";
+            $result=["success"=> false, "message"=>""];
+
+            if($row>0){
+                $result=["success"=>true, "message"=>"Báo cáo đã được gửi đến quản trị viên."];
+            }else{
+                $result=["success"=>false, "message"=>"Có lỗi xảy ra."];
+            }
             include "./models/Phong.php";
             $dsMay= getMayByPhong($maphong);
-            include "./views/home/index.php";
+            include "./views/phong/index.php";
             break;
         default:
             # code...

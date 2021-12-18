@@ -18,7 +18,7 @@
             $arr= str_split($base);
             $id="";
             for($i=0;$i<$length;$i++){
-                $index=round(rand(0, count($arr)));
+                $index=round(rand(0, count($arr)-1));
                 $id .= $arr[$index];
             }
             return $id;

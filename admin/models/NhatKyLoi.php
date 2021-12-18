@@ -1,7 +1,7 @@
 <?php
     function getAllNhatKy(){
         $obj= new Db();
-        $query= "select * from nhatkyloi ";
+        $query= "select * from nhatkyloi order by ThoiGianLoi desc";
         return $obj->selectQuery($query);
     }
     function getAllNhatKyId($id){
@@ -11,7 +11,7 @@
     }
     function getNhatKyLoiByMay($id){
         $obj= new Db();
-        $query= "select * from nhatkyloi where mamay=?";
+        $query= "select * from nhatkyloi where mamay=? order by ThoiGianLoi desc";
         return $obj->selectQuery($query,[$id]);
     }
     function getNhatKy(){

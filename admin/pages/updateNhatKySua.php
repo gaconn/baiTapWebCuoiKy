@@ -3,13 +3,14 @@
     <form class="update-dialog" action="<?php echo $updateControl ?>" method="post">
         <h3>Cập nhật dữ liệu</h3>
         <div>
-            Mã nhật ký <input type="text" name="maPhong" readonly value="<?php echo $NhatKy["MaNhatKy"] ?>"
+            Mã nhật ký <input type="text" name="manks" readonly value="<?php echo $NhatKy["MaNhatKy"] ?>"
                 class="form-control">
             Loại lỗi <input type="text" name="loailoi" value="<?php echo $NhatKy["LoaiLoi"] ?>" class="form-control"
                 required>
             Mô tả <input type="text" name="mota" value="<?php echo $NhatKy["moTa"] ?>" class="form-control" required>
-            Ngày sửa xong <input type="datetime-local" name="ngaysuaxong" value="<?php echo $NhatKy["ngaySuaXong"] ?>"
-                class="form-control" required>
+            Ngày sửa xong <input type="datetime-local" name="ngaysuaxong"
+                value="<?php echo date("Y-m-d\TH:i:s",strtotime($NhatKy["ngaySuaXong"])) ?>" class="form-control"
+                required>
         </div>
         <div class="choice">
             <label for="<?php echo $updateId ?>" class="btn btn-secondary">Trở lại</label>

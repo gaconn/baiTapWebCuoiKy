@@ -1,3 +1,16 @@
+<?php
+    if(isset($result)){
+        if($result["success"]){
+            ?>
+<div class="alert alert-success"><?php echo $result["message"] ?></div>
+<?php
+        }else{
+            ?>
+<div class="alert alert-danger"><?php echo $result["message"] ?></div>
+<?php
+        }
+    }
+?>
 <div class="container">
     <div class="row text-center">Danh sách máy</div>
     <div class="row mt-5 gx-3 gy-3">

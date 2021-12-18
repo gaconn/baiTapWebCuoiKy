@@ -11,7 +11,7 @@
     }
     function getNhatKyByMay($maMay){
         $obj= new Db();
-        $query= "select * from nhatkysuamay where maMay= ?";
+        $query= "select * from nhatkysuamay where maMay= ? order by ngaySuaXong DESC";
         return $obj->selectQuery($query, [$maMay]);
     }
     function deleteNhatKySuaMay($manks){
@@ -21,7 +21,12 @@
     }
     function updateNhatKySuaMay($value){
         $obj= new Db();
-        $query= "update nhatkysuamay set loailoi=? mota=? ngaysuaxong=? where manhatky=?";
+        $query= "update nhatkysuamay set loailoi=?, mota=?, ngaysuaxong=? where manhatky=?";
+        return $obj->insertQuery($query, $value);
+    }
+    function insertNhatKySuaLoi($value){
+        $obj= new Db();
+        $query= "insert into NhatKySuaMay(MaNhatKy,LoaiLoi, MaMay, moTa, ngaySuaXong) values(?,?,?,?,?)";
         return $obj->insertQuery($query, $value);
     }
 ?>
